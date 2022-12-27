@@ -1,0 +1,17 @@
+.cardContainer {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: white;
+  color: black;
+  margin: 20px;
+}
+.InfoRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
