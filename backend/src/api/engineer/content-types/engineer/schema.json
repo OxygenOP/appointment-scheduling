@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "engineers",
+  "info": {
+    "singularName": "engineer",
+    "pluralName": "engineers",
+    "displayName": "engineer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "appointments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appointment.appointment",
+      "mappedBy": "engineer"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "engineer"
+    }
+  }
+}

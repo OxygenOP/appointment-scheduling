@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "costs",
+  "info": {
+    "singularName": "cost",
+    "pluralName": "costs",
+    "displayName": "cost"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "duration": {
+      "type": "decimal",
+      "default": 0.5,
+      "required": true
+    }
+  }
+}

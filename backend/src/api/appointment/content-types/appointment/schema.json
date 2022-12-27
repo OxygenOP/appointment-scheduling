@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "singularName": "appointment",
+    "pluralName": "appointments",
+    "displayName": "Appointment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "engineer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::engineer.engineer",
+      "inversedBy": "appointments"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "costs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cost.cost"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "appointment"
+    },
+    "StartTime": {
+      "type": "time"
+    },
+    "EndTime": {
+      "type": "time"
+    },
+    "restTime": {
+      "type": "integer",
+      "default": 10,
+      "required": true
+    }
+  }
+}
